@@ -78,6 +78,7 @@ function splitIntoParagraps(text: string, maxChars: number): string[] {
     if (data) {
       setCurrentword(splitIntoParagraps(data[1].respond,100));
 			console.log(currentword);
+			console.log("worpd");
     }
   }, [data]);
 

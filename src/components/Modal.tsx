@@ -74,12 +74,12 @@ useEffect(() => {
           {props.book.title}
        </h5>
         <div className=" ">
-          <p className="h-72  overflow-scroll text-gray-300">
+          <div className="h-72  overflow-scroll text-gray-300 px-3 py-2">
      
     {des && des.map((p, index) => (
      <div key={index} style={{ marginBottom: "1em", borderBottom: "1px solid white", paddingBottom: "10px" }}>{p}</div>    
     ))}
-          </p>
+          </div>
 
         </div>
         <button

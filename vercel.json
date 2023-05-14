@@ -15,10 +15,10 @@
       "dest": "https://openapi.naver.com/v1/$1",
       "headers": {
         "X-Naver-Client-Id": "your-naver-client-id",
-        "X-Naver-Client-Secret": "your-naver-client-secret"
+        "X-Naver-Client-Secret": "your-naver-client-secret",
+        "secure": "true"
       },
       "methods": ["GET"],
-      "secure": true,
       "upgrade": false
     }
   ]

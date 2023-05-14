@@ -1,22 +1,27 @@
 {
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://api.qwer.pw/:path*",
+      "method": "GET"
+    },
+    {
+      "source": "/v1/:path*",
+      "destination": "https://openapi.naver.com/v1/:path*",
+      "method": "GET",
+      "headers": {
+        "X-Naver-Client-Id": "your-naver-client-id",
+        "X-Naver-Client-Secret": "your-naver-client-secret"
+      }
+    }
+  ],
   "routes": [
     {
-		  "src": "/v1/(.*)",
-      "dest": "https://openapi.naver.com/",
-      "methods": ["GET"],
+      "src": "/(.*)",
+      "dest": "index.html",
       "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },"rewrites": [
-        {
-          "source": "/api/:path*",
-          "destination": "/v1/:path*"
-        }
-      ],
-      "methods": ["GET"],
-      "secure": false,
-      "upgrade": false
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
     }
   ]
 }

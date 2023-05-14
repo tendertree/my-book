@@ -2,10 +2,7 @@
   "rewrites": [
     {
       "source": "/v1/:path*",
-      "destination": "https://openapi.naver.com/",
-      "headers": {
-        "X-Naver-Client-Id": "your-naver-client-id",
-        "X-Naver-Client-Secret": "your-naver-client-secret"
+      "destination": "https://openapi.naver.com/v1/path"
       }
     }
   ]

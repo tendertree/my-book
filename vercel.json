@@ -1,4 +1,8 @@
-{
+{  "rewrites": [
+    {
+      "source": "/api/happy",
+      "destination": "https://api.qwer.pw/request/helpful_text?apikey=guest"
+    },
  "routes": [
     {
 		  "src": "/v1/(.*)",

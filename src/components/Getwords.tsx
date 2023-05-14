@@ -43,7 +43,7 @@ function WordAnimation({ data }: { data: WordData }): JSX.Element {
 export default function Getwords(): JSX.Element {
   const [currentword, setCurrentword] = useState("");
   const getGoodword = async () => {
-    const response = await fetch("api/request/helpful_text?apikey=guest", {
+    const response = await fetch("api/happy", {
       method: "GET",
       mode: "cors",
       headers: new Headers({}),

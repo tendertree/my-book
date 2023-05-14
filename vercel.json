@@ -7,8 +7,6 @@
       "headers": {
         "X-Requested-With": "XMLHttpRequest",
         "Content-Type": "application/json",
-        "X-Naver-Client-Id": "your-naver-client-id",
-        "X-Naver-Client-Secret": "your-naver-client-secret",
         "Access-Control-Allow-Origin": "*"
       }
     }

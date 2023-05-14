@@ -2,7 +2,7 @@
   "routes": [
     {
 		  "src": "/v1/(.*)",
-      "dest": "https://openapi.naver.com/v1/",
+      "dest": "https://openapi.naver.com/",
       "methods": ["GET"],
       "headers": {
         "X-Requested-With": "XMLHttpRequest",

@@ -1,34 +1,16 @@
 {
-
-  "builds": [
-    {
-      "src": "./index.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "./index.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+		  "src": "/v1/(.*)",
+      "dest": "https://openapi.naver.com/v1/search/book.json?query=${theme}&display=30&start=:splat",
+      "methods": ["GET"],
       "headers": {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/json",
+        "X-Naver-Client-Id": "your-naver-client-id",
+        "X-Naver-Client-Secret": "your-naver-client-secret",
         "Access-Control-Allow-Origin": "*"
       }
     }
   ]
-  
-    ],
-    "rewrites": [
-        {
-          "source": "/v1",
-          "destination": "https://openapi.naver.com/"
-        },
-        {
-          "source": "/api/",
-          "destination": "https://api.qwer.pw"
-        }
-      ]
-  
-  }
-  
-  
+}

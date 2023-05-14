@@ -19,5 +19,10 @@
         }
       ]
     }
-  ]
+  ],
+  "rewrites": [
+	  {
+	  "source": "/api",
+      "destination": "https://api.qwer.pw"
+	  },]
 }

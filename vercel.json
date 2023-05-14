@@ -3,6 +3,11 @@
     {
       "source": "/v1/:path*",
       "destination": "https://openapi.naver.com/v1/:path*"
-      }
+      },
+	  {
+		"source" :"/api/:path*",
+        "destination": "https://api.qwer.pw/:path*"
+
+	  }
   ]
 }

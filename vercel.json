@@ -2,7 +2,7 @@
  "routes": [
     {
 		  "src": "/v1/(.*)",
-      "dest": "https://openapi.naver.com/",
+      "dest": "https://openapi.naver.com/v1/search/book.json?query=happby&display=30&start=1",
       "methods": ["GET"],
       "headers": {
         "X-Requested-With": "XMLHttpRequest",

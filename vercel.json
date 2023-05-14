@@ -21,8 +21,9 @@
     }
   ],
   "rewrites": [
-	  {
-	  "source": "/api",
+    {
+      "source": "/api",
       "destination": "https://api.qwer.pw"
-	  },]
+    }
+  ]
 }

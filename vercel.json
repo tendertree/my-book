@@ -19,7 +19,6 @@
         "secure": "true"
       },
       "methods": ["GET"],
-      "upgrade": false
     }
   ]
 }

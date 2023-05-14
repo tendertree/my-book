@@ -19,8 +19,19 @@
         ]
   
       }
+      
   
-    ]
+    ],
+    "rewrites": [
+        {
+          "source": "/v1",
+          "destination": "https://openapi.naver.com/"
+        },
+        {
+          "source": "/api/",
+          "destination": "https://api.qwer.pw"
+        }
+      ]
   
   }
   

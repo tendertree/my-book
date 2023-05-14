@@ -42,14 +42,14 @@ const GetBookInfinity_data = () => {
   const fetchBooks = async ({ pageParam = 1, queryKey }) => {
     const [key, { theme }] = queryKey;
     const response = await fetch(
-      `https://openapi.naver.com/v1/search/book.json?query=${theme}&display=30&start=${
+      `v1/search/book.json?query=${theme}&display=30&start=${
         (pageParam - 1) * 30 + 1
       }`,
       {
         method: "GET",
         headers: new Headers({
-          "X-Naver-Client-Id": import.meta.env.VITE_ID_KEY,
-          "X-Naver-Client-Secret": import.meta.env.VITE_SECRET_KEY,
+          "X-Naver-Client-Id": process.env.VITE_ID_KEY,
+          "X-Naver-Client-Secret": process.env.VITE_SECRET_KEY,
         }),
       }
     );

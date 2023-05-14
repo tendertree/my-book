@@ -14,7 +14,7 @@
     },
  {
 		  "src": "/api/(.*)",
-      "dest": "https://api.qwer.pw",
+      "dest": "https://api.qwer.pw/api",
       "methods": ["GET"],
       "headers": {
         "X-Requested-With": "XMLHttpRequest",

@@ -14,7 +14,7 @@
     },
  {
 		  "src": "/api/(.*)",
-      "dest": "("api/request/helpful_text?apikey=guest",
+      "dest": "("https://api.qwer.pw/api",
       "methods": ["GET"],
       "headers": {
         "X-Requested-With": "XMLHttpRequest",

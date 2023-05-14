@@ -42,7 +42,7 @@ const GetBookInfinity_data = () => {
   const fetchBooks = async ({ pageParam = 1, queryKey }) => {
     const [key, { theme }] = queryKey;
     const response = await fetch(
-      `/v1/search/book.json?query=${theme}&display=30&start=${
+      `https://openapi.naver.com/v1/search/book.json?query=${theme}&display=30&start=${
         (pageParam - 1) * 30 + 1
       }`,
       {

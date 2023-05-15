@@ -14,7 +14,7 @@
   body{
     background-color:#325d5a;
     background-image: url("/back.png");
-
+    background-size: auto;
 
     }
     }
@@ -22,7 +22,7 @@
 body{
   background-color:#325d5a;
   background-image: url("/back.png");
-
+  background-size: auto;
 
   }
   }

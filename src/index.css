@@ -6,5 +6,21 @@
   body{
     /* ... */
 	  background-color:#658B6C;
+
+    
  }
 }
+@media (max-width: 360px) {
+  body{
+    background-color:#325d5a;
+    background-image: url("back_mobile.png");
+    background-repeat:no-repeat;
+    }
+    }
+@media (min-width: 360px) {
+body{
+  background-color:#325d5a;
+  background-image: url("/back.png");
+  background-repeat:no-repeat;
+  }
+  }

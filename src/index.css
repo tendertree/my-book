@@ -1,33 +1,32 @@
 @tailwind base;
-* {
-  scrollbar-width: thin;
-  scrollbar-color: white;
-}
+
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-
-  body{
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: white;
+  }
+  ,
+  body {
     /* ... */
-	  background-color:#658B6C;
-
-    
- }
+    background-color: #658b6c;
+  }
 }
 @media (max-width: 360px) {
-  body{
-    background-color:#325d5a;
+  body {
+    background-color: #325d5a;
     background-image: url("/back.png");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: auto;
-    }
-    }
-@media (min-width: 360px) {
-  body{
-    background-color:#325d5a;
-    background-image: url("/back.png");
-    background-repeat:no-repeat;
-    background-size: auto;
-    }
   }
+}
+@media (min-width: 360px) {
+  body {
+    background-color: #325d5a;
+    background-image: url("/back.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}

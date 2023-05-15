@@ -41,10 +41,10 @@ const GetBookInfinity_data = () => {
 	const boxRef: React.MutableRefObject<(HTMLElement | null)[]> = useRef([]);
 	const fetchBooks = async ({ pageParam = 1, queryKey }) => {
 		const [key, { theme }] = queryKey;
-		const keyTest = import.meta.env.ID_KEY;
+		const keyTest = import.meta.env.VITE_ID;
 		console.log("env show?");
 		console.log(keyTest);
-		const keyTest2 = process.env.ID_KEY;
+		const keyTest2 = process.env.VITE_ID;
 		console.log("env show2?");
 		console.log(keyTest2);
 		const response = await fetch(

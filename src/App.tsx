@@ -1,13 +1,10 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import gsap from "gsap";
 
 import Getwords from "./components/Getwords";
-import Footer from "./components/Footer";
 import GetBookInfinity_data from "./components/GetBook_infinity_data";
 import Seachbar from "./components/SearchBar/Searchbar";
-import ScrollGallery from "./components/ScrollGallery";
 
 
 function App() {

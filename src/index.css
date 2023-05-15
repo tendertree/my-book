@@ -13,16 +13,16 @@
 @media (max-width: 360px) {
   body{
     background-color:#325d5a;
-    background-image: url("back_mobile.png");
-    background-repeat:repeat-x;
-    background-size: cover;
+    background-image: url("/back.png");
+    background-repeat: repeat-x;
+
     }
     }
 @media (min-width: 360px) {
 body{
   background-color:#325d5a;
   background-image: url("/back.png");
-  background-repeat:repeat-x;
-  background-size: cover;
+  background-repeat: repeat-x;
+
   }
   }

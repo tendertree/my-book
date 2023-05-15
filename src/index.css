@@ -14,15 +14,15 @@
   body{
     background-color:#325d5a;
     background-image: url("/back.png");
-    background-repeat: repeat-x;
+
 
     }
     }
-@media (min-width: 360px) {
+@media (min-width: 360px) {ㄴ
 body{
   background-color:#325d5a;
   background-image: url("/back.png");
-  background-repeat: repeat-x;
+
 
   }
   }

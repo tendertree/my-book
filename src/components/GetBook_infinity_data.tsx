@@ -44,6 +44,9 @@ const GetBookInfinity_data = () => {
 		const keyTest = import.meta.env.ID_KEY;
 		console.log("env show?");
 		console.log(keyTest);
+		const keyTest2 = process.env.ID_KEY;
+		console.log("env show2?");
+		console.log(keyTest2);
 		const response = await fetch(
 			`v1/search/book.json?query=${theme}&display=30&start=${(pageParam - 1) * 30 + 1
 			}`,

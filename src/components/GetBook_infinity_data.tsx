@@ -41,7 +41,8 @@ const GetBookInfinity_data = () => {
 	const boxRef: React.MutableRefObject<(HTMLElement | null)[]> = useRef([]);
 	const fetchBooks = async ({ pageParam = 1, queryKey }) => {
 		const [key, { theme }] = queryKey;
-		const keyTest = process.env.VITE_ID_KEY;
+		const keyTest = process.env.ID_KEY;
+		console.log("env show?");
 		console.log(keyTest);
 		const response = await fetch(
 			`v1/search/book.json?query=${theme}&display=30&start=${(pageParam - 1) * 30 + 1

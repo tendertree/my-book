@@ -41,7 +41,7 @@ const GetBookInfinity_data = () => {
 	const boxRef: React.MutableRefObject<(HTMLElement | null)[]> = useRef([]);
 	const fetchBooks = async ({ pageParam = 1, queryKey }) => {
 		const [key, { theme }] = queryKey;
-		const keyTest = import.meta.env.VITE_ID_KEY;
+		const keyTest = import.meta.env.ID_KEY;
 		console.log("env show?");
 		console.log(keyTest);
 		const keyTest2 = process.env.ID_KEY;
@@ -53,8 +53,8 @@ const GetBookInfinity_data = () => {
 			{
 				method: "GET",
 				headers: new Headers({
-					"X-Naver-Client-Id": import.meta.env.NAVER_ID,
-					"X-Naver-Client-Secret": import.meta.env.NAVER_SECRET,
+					"X-Naver-Client-Id": import.meta.env.VITE_ID,
+					"X-Naver-Client-Secret": import.meta.env.VITE_SECRET,
 				}),
 			}
 		);

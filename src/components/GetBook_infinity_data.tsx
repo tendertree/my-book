@@ -49,8 +49,8 @@ const GetBookInfinity_data = () => {
 			{
 				method: "GET",
 				headers: new Headers({
-					"X-Naver-Client-Id": process.env.VITE_ID,
-					"X-Naver-Client-Secret": process.env.VITE_SECRET,
+					"X-Naver-Client-Id": import.meta.env.VITE_ID_KEY,
+					"X-Naver-Client-Secret": import.meta.env.VITE_SECRET_KEY,
 				}),
 			}
 		);

@@ -11,8 +11,7 @@ import {
   useState,
 } from "react";
 import { useInView } from "react-intersection-observer";
-const ID_KEY = "DX8HfBFLotM13_Vw3L31";
-const SECRET_KEY = "IHwlAcIjrh";
+
 
 type Book = {
   title: string;

@@ -14,7 +14,7 @@
   body{
     background-color:#325d5a;
     background-image: url("back_mobile.png");
-    background-repeat:no-repeat;
+    background-repeat:repeat-x;
     background-size: cover;
     }
     }
@@ -22,7 +22,7 @@
 body{
   background-color:#325d5a;
   background-image: url("/back.png");
-  background-repeat:no-repeat;
+  background-repeat:repeat-x;
   background-size: cover;
   }
   }

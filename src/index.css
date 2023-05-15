@@ -15,14 +15,12 @@
     background-color:#325d5a;
     background-image: url("/back.png");
     background-size: auto;
-
     }
     }
-@media (min-width: 360px) {ㄴ
-body{
-  background-color:#325d5a;
-  background-image: url("/back.png");
-  background-size: auto;
-
-  }
+@media (min-width: 360px) {
+  body{
+    background-color:#325d5a;
+    background-image: url("/back.png");
+    background-size: auto;
+    }
   }

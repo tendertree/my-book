@@ -1,12 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import {  useRef } from "react";
 import gsap from "gsap";
+interface CardProps{
+	title:string;
+	description:string;
+	image:string;
+	showModal:()=>void;
+	setBook:(book:{title:string,description:string})=>void;
+}
 export default function Card({
-  title,
+	title,
   description,
   image,
   showModal,
   setBook,
-}) {
+}:CardProps) {
   const boxRef = useRef(null);
   const handleMouseEnter = () => {
     gsap.to(boxRef.current, { scale: 1.05, duration: 0.3 });
@@ -35,7 +42,7 @@ export default function Card({
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="books w-56 max-w-sm mx-auto bg-[#EEDA9C] items-center justify-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      className="books w-56 max-w-sm mx-auto bg-[#EEDA9C] items-center justify-center border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
       <a href="#">
         <div className="h-64 px-1 py-1 overflow-hidden">

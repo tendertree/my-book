@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, ChangeEventHandler, MouseEventHandler, useEffect, useState } from "react";
 import "./SearchBar.css";
-interface Seachbar {
+interface SeachbarProps {
   search: string;
-  setSearch: () => void;
+	setSearch: (value:any) => void;
 }
-const Seachbar = ({ search, setSearch }: Seachbar) => {
+const Searchbar = ({ search, setSearch }: SeachbarProps) => {
   const [message, setMessage] = useState();
   useEffect(() => {
     return () => {
@@ -12,10 +12,16 @@ const Seachbar = ({ search, setSearch }: Seachbar) => {
     };
   }, []);
 
-  const handleChange = (event) => {
+  const handleChange: ChangeEventHandler<HTMLInputElement> = (event:ChangeEvent<HTMLInputElement>) => {
     console.log(search);
     setSearch(event.target.value);
   };
+
+	const handleClick: MouseEventHandler<HTMLInputElement>=(event) => {
+ const inputElement = event.target as HTMLInputElement; // Narrow down the type to HTMLInputElement
+  setSearch(inputElement.value);
+  };
+
 
   return (
     <><div className="w-96">
@@ -43,7 +49,7 @@ const Seachbar = ({ search, setSearch }: Seachbar) => {
           </div>
           <input
             onChange={handleChange}
-            onClick={handleChange}
+            onClick={handleClick}
             value={search}
             id="default-search"
             className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -62,4 +68,4 @@ const Seachbar = ({ search, setSearch }: Seachbar) => {
     </>
   );
 };
-export default Seachbar;
+export default Searchbar;

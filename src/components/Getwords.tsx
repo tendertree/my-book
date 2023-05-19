@@ -13,7 +13,7 @@ function WordAnimation({ data }: { data: WordData }): JSX.Element {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      if (data && data[1].respond.length >= 3) {
+      if (data) {
         gsap.fromTo(
           chars,
           {

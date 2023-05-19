@@ -1,16 +1,11 @@
 import {
 	useInfiniteQuery,
-	useMutation,
-	useQuery,
-	useQueryClient,
 } from "@tanstack/react-query";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Card from "./Card";
 import {
 	Suspense,
-	createRef,
-	useCallback,
 	useEffect,
 	useLayoutEffect,
 	useMemo,
@@ -19,7 +14,7 @@ import {
 } from "react";
 import { useInView } from "react-intersection-observer";
 import Modal from "./Modal";
-import Seachbar from "./SearchBar/Searchbar";
+import Searchbar from "./SearchBar/Searchbar";
 
 type Book = {
 	title: string;
@@ -34,21 +29,23 @@ const initialBookState: Book = {
 };
 
 const GetBookInfinity_data = () => {
-	const ID = "DX8HfBFLotM13_Vw3L31";
-	const KEY = "IHwlAcIjrh";
+
 	const [theme, setTheme] = useState("행복");
 	const [book, setBook] = useState(initialBookState);
 	const [keyword, setKeyword] = useState("");
 	const [bottomRef, inView] = useInView();
 	const boxRef: React.MutableRefObject<(HTMLElement | null)[]> = useRef([]);
-	const fetchBooks = async ({ pageParam = 1, queryKey }) => {
-		const [key, { theme }] = queryKey;
+	const fetchBooks = async ({ pageParam = 1 }: { pageParam?: number }) => {
+		//	const [key,{ theme }] = queryKey;
 		const response = await fetch(
 			`v1/search/book.json?query=${theme}&display=30&start=${(pageParam - 1) * 30 + 1
 			}`,
 			{
 				method: "GET",
 				headers: new Headers({
+					//"X-Naver-Client-Id": ID,
+					//"X-Naver-Client-Secret": KEY,
+
 					"X-Naver-Client-Id": import.meta.env.VITE_ID_KEY,
 					"X-Naver-Client-Secret": import.meta.env.VITE_SECRET_KEY,
 				}),
@@ -64,7 +61,7 @@ const GetBookInfinity_data = () => {
 
 	const useBooksInfiniteQuery = () => {
 		return useInfiniteQuery<Book[], Error>(
-			["bookData", { theme }],
+			["bookData", theme],
 			fetchBooks,
 			{
 				getNextPageParam: (lastPage) => lastPage.nextPage,
@@ -129,7 +126,7 @@ const GetBookInfinity_data = () => {
 				</button>
 			</div>
 			<div className="flex mx-auto justify-center w-72 sm:w-96 mb-10">
-				<Seachbar search={keyword} setSearch={setKeyword}></Seachbar>
+				<Searchbar search={keyword} setSearch={setKeyword}></Searchbar>
 			</div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-2 ">

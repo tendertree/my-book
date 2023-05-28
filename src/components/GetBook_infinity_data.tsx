@@ -71,11 +71,8 @@ const GetBookInfinity_data = () => {
 	const { data, isSuccess, hasNextPage, fetchNextPage, isFetchingNextPage } =
 		useBooksInfiniteQuery();
 	gsap.registerPlugin(ScrollTrigger);
-
 	const books = data?.pages?.flatMap((page) => page.items) || [];
-
 	const [modalVisible, setModalVisible] = useState(false);
-
 	const toggleModal = () => {
 		setModalVisible(!modalVisible);
 	};
